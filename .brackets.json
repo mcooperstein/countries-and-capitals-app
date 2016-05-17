@@ -1,0 +1,5 @@
+{
+    "jscodehints.detectedExclusions": [
+        "/Users/marccooperstein/ThinkfulProjects/countries-and-capitals-app/app/bower_components/jquery/src/exports/amd.js"
+    ]
+}

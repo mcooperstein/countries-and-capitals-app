@@ -1,0 +1,52 @@
+<div id="table-header">
+    <label id="table-search">Search by Country Name:
+        <input ng-model="search.countryName">
+    </label>
+    <ul>
+        <li>Name
+            <span id="arrow" ng-click="predicate='countryName'; reverse=!reverse" class="fa fa-caret-square-o-down"></span>
+            <span id="arrow" ng-click="predicate='countryName'; reverse=!reverse" class="fa fa-caret-square-o-up"></span>
+        </li>
+        <li id="cc">Code
+            <span id="arrow" class="fa fa-caret-square-o-down" ng-click="predicate='countryCode'; reverse=!reverse"></span>
+            <span id="arrow" class="fa fa-caret-square-o-up" ng-click="predicate='countryCode'; reverse=!reverse"></span>
+        </li>
+        <li>Capital
+            <span id="arrow" ng-click="predicate='capital'; reverse=!reverse" class="fa fa-caret-square-o-down"></span>
+            <span id="arrow" ng-click="predicate='capital'; reverse=!reverse" class="fa fa-caret-square-o-up"></span>
+        </li>
+        <li href="">Area in km<sup>2</sup>
+            <span id="arrow" ng-click="predicate='areaInSqKm'; reverse=!reverse" class="fa fa-caret-square-o-down"></span>
+            <span id="arrow" ng-click="predicate='areaInSqKm'; reverse=!reverse" class="fa fa-caret-square-o-up"></span>
+        </li>
+        <li href="">Population
+            <span id="arrow" ng-click="predicate='population'; reverse=!reverse" class="fa fa-caret-square-o-down"></span>
+            <span id="arrow" ng-click="predicate='population'; reverse=!reverse" class="fa fa-caret-square-o-up"></span>
+        </li>
+        <li>Continent
+            <span id="arrow" ng-click="predicate='continentName'; reverse=!reverse" class="fa fa-caret-square-o-down"></span>
+            <span id="arrow" ng-click="predicate='continentName'; reverse=!reverse" class="fa fa-caret-square-o-up"></span>
+        </li>
+    </ul>
+</div>
+
+<div class="content">
+
+    <table class="table table-striped table-hover">
+        <tbody class="table-body">
+            <tr ng-repeat="country in countries | orderBy:predicate:reverse | filter:search:startsWith" ng-click="showDetail(country)">
+                <td><a class="country-name" ng-href="#/countries/{{country.countryCode}}">{{country.countryName}}</a></td>
+                <td>{{country.countryCode}}</td>
+                <td>{{country.capital}}</td>
+                <td>{{(country.areaInSqKm) | number}}</td>
+                <td>{{(country.population) | number}}</td>
+                <td>{{country.continentName}}</td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>
+
+<a href="#/home">
+    <div class="home-button btn btn-default btn-md">Back to Home</div>
+</a>

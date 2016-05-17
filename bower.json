@@ -1,0 +1,27 @@
+{
+  "name": "countries-and-capitals-app",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Marc Cooperstein"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/mcooperstein/countries-and-capitals-app",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.5",
+    "angular-route": "^1.5.5",
+    "angular-animate": "^1.5.5",
+    "jquery": "^2.2.3",
+    "animate.css": "^3.5.1",
+    "bootstrap": "^3.3.6",
+    "font-awesome": "fontawesome#^4.6.3",
+    "normalize-css": "normalize.css#^4.1.1"
+  }
+}
